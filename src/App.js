@@ -1,13 +1,15 @@
 //Step 1 - import React
 import React from "react"
-import Hello from "./sayHello"
+import Tweet from "./Tweet"
 
 // Step 2 - Create a component
 function App() {
 	return (
-		<div>
-			<h1>This is the app component</h1>
-			<Hello />
+		<div className="app">
+			<Tweet name="EmmaohmaGod" message="somebody say oh my God" />{" "}
+			{/*to place the exported tweet app after importing it */}
+			<Tweet name="Gordon Ramsey" message="IT'S RAWW!! " />
+			<Tweet name="Limoblaze" message="God's favourite baby" />
 		</div>
 	)
 }
