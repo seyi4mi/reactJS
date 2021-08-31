@@ -12,8 +12,8 @@ function App() {
 
 	return (
 		<div className="app">
-			{users.map((info) => (
-				<Tweet name={users.name} message={users.message} />
+			{users.map((user) => (
+				<Tweet name={user.name} message={user.message} />
 			))}
 		</div>
 	)
