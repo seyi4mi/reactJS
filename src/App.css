@@ -7,7 +7,7 @@
 }
 
 .tweet {
-    height: 290px;
+    height: 29 0px;
     width: 290px;
     background: white;
     border-radius: 30px;
@@ -15,4 +15,9 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+.red {
+    color: red;
+    font-size: 50px;
 }

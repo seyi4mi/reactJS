@@ -1,15 +1,22 @@
 //Step 1 - import React
-import React from "react"
+import React, { useState } from "react"
 import Tweet from "./Tweet"
 
 // Step 2 - Create a component
 function App() {
+	const [isRed, setRed] = useState(false)
+	const [count, setCount] = useState(0)
+
+	const increment = () => {
+		setCount(count + 1)
+		setRed(!isRed)
+	}
+
 	return (
 		<div className="app">
-			<Tweet name="EmmaohmaGod" message="somebody say oh my God" />{" "}
-			{/*to place the exported tweet app after importing it */}
-			<Tweet name="Gordon Ramsey" message="IT'S RAWW!! " />
-			<Tweet name="Limoblaze" message="God's favourite baby" />
+			<h1 className={isRed ? "red" : ""}>Change my colour</h1>
+			<button onClick={increment}>Increment</button>
+			<h1>{count}</h1>
 		</div>
 	)
 }
