@@ -4,19 +4,17 @@ import Tweet from "./Tweet"
 
 // Step 2 - Create a component
 function App() {
-	const [isRed, setRed] = useState(false)
-	const [count, setCount] = useState(0)
-
-	const increment = () => {
-		setCount(count + 1)
-		setRed(!isRed)
-	}
+	const [users, setUsers] = useState([
+		{ name: "EmmaohmaGod", message: "somebody say oh my God" },
+		{ name: "Gordon Ramsey", message: "IT'S RAWW!!" },
+		{ name: "Limoblaze", message: "God's favourite baby" },
+	])
 
 	return (
 		<div className="app">
-			<h1 className={isRed ? "red" : ""}>Change my colour</h1>
-			<button onClick={increment}>Increment</button>
-			<h1>{count}</h1>
+			{users.map((info) => (
+				<Tweet name={users.name} message={users.message} />
+			))}
 		</div>
 	)
 }
